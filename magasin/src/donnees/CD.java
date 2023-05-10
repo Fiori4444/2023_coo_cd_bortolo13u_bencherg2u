@@ -97,11 +97,13 @@ public class CD {
 		return (resultat);
 	}
 
-	public String getNomArtiste() {
-		return nomArtiste;
-	}
-
-	public String getNomCD() {
-		return nomCD;
+	public int compareTitre(CD cd){
+		if(this.nomCD.compareTo(cd.nomCD)>0){
+			return 1;
+		} else if (this.nomCD.compareTo(cd.nomCD) < 0) {
+			return -1;
+		} else{
+			return 0;
+		}
 	}
 }
