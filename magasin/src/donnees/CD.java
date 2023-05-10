@@ -97,5 +97,11 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO 
+	public String getNomArtiste() {
+		return nomArtiste;
+	}
+
+	public String getNomCD() {
+		return nomCD;
+	}
 }
