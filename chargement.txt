@@ -1,0 +1,11 @@
+1)on créé un objet chargeur de type ChargeurMagasin en passant en paramètre un répertoire
+2)l'objet chargeur appelle la méthode chargerMagasin()
+3)la méthode chargerMagasin() créé un objet magasin de type Magasin
+4)la méthode chargerMagasin() créé un objet chargeCd1 de type ChargeurCD
+5)l'objet chargeCd1 appelle la méthode chargerCD()
+6)la méthode chargerCD() créé un objet cd1 de type CD
+7)l'objet chargeCd1 appelle la méthode extrairePiste() sur lui-même
+8)l'objet cd1 appelle la méthode ajouterPiste()
+9)comme la ligne 7
+10)comme la ligne 8
+11)la méthode chargerCD arrive en fin de vie et l'objet magasin appelle la méthode ajouteCD(cd1) avec en paramètre l'objet cd1
