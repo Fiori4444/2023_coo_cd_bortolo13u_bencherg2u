@@ -1,6 +1,7 @@
 package donnees;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * La classe Magasin represente un magasin qui vend des CDs.</p>
@@ -68,9 +69,39 @@ public class Magasin {
 		return(res);
 	}
 
-	public void trieCDTitre(){
-		for (int i=0;i<listeCds.size();i++){
-			
+	public void trierAlbum(){
+		int taille = listeCds.size();
+
+		for (int i = 0; i < taille - 1; i++) {
+			int indexMinimum = i;
+
+			for (int j = i + 1; j < taille; j++) {
+				if (listeCds.get(j).getNomCD().compareTo(listeCds.get(indexMinimum).getNomCD()) < 0) {
+					indexMinimum = j;
+				}
+			}
+
+			if (indexMinimum != i) {
+				Collections.swap(listeCds, i, indexMinimum);
+			}
+		}
+	}
+
+	public void trierArtiste(){
+		int taille = listeCds.size();
+
+		for (int i = 0; i < taille - 1; i++) {
+			int indexMinimum = i;
+
+			for (int j = i + 1; j < taille; j++) {
+				if (listeCds.get(j).getNomArtiste().compareTo(listeCds.get(indexMinimum).getNomArtiste()) < 0) {
+					indexMinimum = j;
+				}
+			}
+
+			if (indexMinimum != i) {
+				Collections.swap(listeCds, i, indexMinimum);
+			}
 		}
 	}
 
