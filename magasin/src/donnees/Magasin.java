@@ -74,13 +74,11 @@ public class Magasin {
 
 		for (int i = 0; i < taille - 1; i++) {
 			int indexMinimum = i;
-
 			for (int j = i + 1; j < taille; j++) {
 				if (listeCds.get(j).compareCdAlbums(listeCds.get(indexMinimum))) {
 					indexMinimum = j;
 				}
 			}
-
 			if (indexMinimum != i) {
 				Collections.swap(listeCds, i, indexMinimum);
 			}
