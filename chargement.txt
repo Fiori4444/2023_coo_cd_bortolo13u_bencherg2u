@@ -9,3 +9,13 @@
 9)comme la ligne 7
 10)comme la ligne 8
 11)la méthode chargerCD arrive en fin de vie et l'objet magasin appelle la méthode ajouteCD(cd1) avec en paramètre l'objet cd1
+
+TD12/13
+
+3) On devra modifier la classe magasin mais on ne pense pas que cela est bon sur le long terme
+
+4) Oui car les deux méthodes sont identiques il y a juste un mot qui change entre les deux. Si un morceau de code se révélerai buggé l'erreur serai présente dans les deux méthodes. 
+
+5) Le code est identique entre les deux méthodes seulement la méthode utilisée pour comparer les nom de CDs ou d'Artistes changent. C'est le code qui fait partie intégrante du tri par sélection
+
+6) Il faudrait refaire une nouvelle méthode de tri différente. Je pense qu'il n'y a rien à conserver ou très peu
