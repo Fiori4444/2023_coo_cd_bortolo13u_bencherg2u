@@ -76,7 +76,7 @@ public class Magasin {
 			int indexMinimum = i;
 
 			for (int j = i + 1; j < taille; j++) {
-				if (listeCds.get(j).getNomCD().compareTo(listeCds.get(indexMinimum).getNomCD()) < 0) {
+				if (listeCds.get(j).compareCdAlbums(listeCds.get(indexMinimum))) {
 					indexMinimum = j;
 				}
 			}
@@ -94,7 +94,7 @@ public class Magasin {
 			int indexMinimum = i;
 
 			for (int j = i + 1; j < taille; j++) {
-				if (listeCds.get(j).getNomArtiste().compareTo(listeCds.get(indexMinimum).getNomArtiste()) < 0) {
+				if (listeCds.get(j).compareCdArtiste(listeCds.get(indexMinimum))) {
 					indexMinimum = j;
 				}
 			}
