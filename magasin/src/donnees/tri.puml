@@ -1,0 +1,30 @@
+@startuml
+
+class magasin{
+    -listeCds
+
+    +Magasin()
+    +ajouteCd(cdAAjouter : CD)
+    +toString() : String
+    +getNombreCds() : int
+    +getCd(i : int) : CD
+    +trier(cd : ComparateurCd)
+}
+
+interface ComparateurCd{
+    +etreAvant(cd1 : CD, cd2 : CD) : boolean
+}
+
+class ComparateurAlbum{
+    +etreAvant(cd1 : CD, cd2 : CD) : boolean
+}
+
+class ComparateurArtiste{
+    +etreAvant(cd1 : CD, cd2 : CD) : boolean
+}
+
+ComparateurCd <|.. ComparateurAlbum
+ComparateurCd <|.. ComparateurArtiste
+magasin "use " ..> ComparateurCd
+
+@enduml

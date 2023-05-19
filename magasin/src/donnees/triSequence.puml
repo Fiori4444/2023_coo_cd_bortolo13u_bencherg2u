@@ -1,0 +1,39 @@
+@startuml
+title Tri par Album
+
+
+
+participant "magasin : Magasin" as m
+participant "listeCds : ArrayList<CD>" as l
+
+participant "cd : ComparateurCd" as cc
+participant "c : Collections" as c
+
+-> m  : trier(ComparateurCd cd)
+ activate m
+ m -> l: listeCds.size()
+ activate l
+ m <-- l: int
+ deactivate l
+
+    loop indice i
+        loop indice j
+            alt cd.etreAvant(listeCds.get(j),listeCds.get(indexMinimum))
+                l -> cc : etreAvant(listeCds.get(j),get(listeCds.size())
+                activate cc
+                l <-- cc : boolean
+                deactivate cc
+            end
+        end
+
+        alt (indexMinimum != i)
+            m -> c : swap(listeCds, i, indexMinimum)
+            activate c
+            m <-- c : void
+            deactivate c
+        end
+    end
+ <-- m  : void
+ deactivate m
+
+@enduml
