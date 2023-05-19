@@ -107,4 +107,8 @@ public class CD {
 		String nom = (String) (cd.nomArtiste);
 		return this.nomArtiste.compareTo(nom) < 0;
 	}
+
+	public boolean compareNbCds(CD cd){
+		return this.pistes.size()>=cd.pistes.size();
+	}
 }

@@ -70,19 +70,15 @@ public class Magasin {
 	}
 
 
-
 	public void trier(ComparateurCd cd){
 		int taille = listeCds.size();
-
 		for (int i = 0; i < taille - 1; i++) {
 			int indexMinimum = i;
-
 			for (int j = i + 1; j < taille; j++) {
 				if (cd.etreAvant(listeCds.get(j),listeCds.get(indexMinimum))) {
 					indexMinimum = j;
 				}
 			}
-
 			if (indexMinimum != i) {
 				Collections.swap(listeCds, i, indexMinimum);
 			}
