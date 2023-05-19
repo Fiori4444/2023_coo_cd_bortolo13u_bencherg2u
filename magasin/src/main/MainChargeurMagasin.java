@@ -1,12 +1,10 @@
 package main;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import donnees.ComparateurAlbum;
-import donnees.ComparateurArtiste;
-import donnees.ComparateurNbPistes;
-import donnees.Magasin;
+import donnees.*;
 import XML.ChargeurMagasin;
 
 /**
@@ -35,12 +33,19 @@ public class MainChargeurMagasin {
 
 
 
-		//resultat.trier(new ComparateurArtiste());
-		//System.out.println(resultat);
-		//resultat.trier(new ComparateurAlbum());
-		//System.out.println(resultat);
+		resultat.trier(new ComparateurArtiste());
+		System.out.println(resultat);
+		resultat.trier(new ComparateurAlbum());
+		System.out.println(resultat);
 		resultat.trier(new ComparateurNbPistes());
 		System.out.println(resultat);
+		ArrayList<CD> lstCd= resultat.chercherArtiste(new SelecteurArtiste("Justin Bieber"));
+		for (CD cd : lstCd) {
+			System.out.println(cd);
+		}
+
+
+
 
 	}
 

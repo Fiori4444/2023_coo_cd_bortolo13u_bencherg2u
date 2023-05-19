@@ -97,6 +97,9 @@ public class CD {
 		return (resultat);
 	}
 
+	public String getNomArtiste() {
+		return nomArtiste;
+	}
 
 	public boolean compareCdAlbums(CD cd){
 		String nom = (String) (cd.nomCD);
@@ -109,6 +112,10 @@ public class CD {
 	}
 
 	public boolean compareNbCds(CD cd){
-		return this.pistes.size()>=cd.pistes.size();
+		return this.pistes.size()<cd.pistes.size();
+	}
+
+	public boolean equalsArtiste(String artiste){
+		return this.nomArtiste.equals(artiste);
 	}
 }

@@ -85,4 +85,14 @@ public class Magasin {
 		}
 	}
 
+	public ArrayList<CD> chercherArtiste(Selecteur selecteur){
+		ArrayList<CD> resultat = new ArrayList<>();
+		for (int i=0;i<listeCds.size();i++){
+			if(selecteur.garderCd(getCd(i))){
+				resultat.add(listeCds.get(i));
+			}
+		}
+		return resultat;
+	}
+
 }
