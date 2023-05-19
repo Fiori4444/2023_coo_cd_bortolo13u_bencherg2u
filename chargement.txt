@@ -19,3 +19,8 @@ TD12/13
 5) Le code est identique entre les deux méthodes seulement la méthode utilisée pour comparer les nom de CDs ou d'Artistes changent. C'est le code qui fait partie intégrante du tri par sélection
 
 6) Il faudrait refaire une nouvelle méthode de tri différente. Je pense qu'il n'y a rien à conserver ou très peu
+
+
+16) On doit changer juste une ligne au niveau du if
+
+
